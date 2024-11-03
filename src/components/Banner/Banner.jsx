@@ -14,7 +14,7 @@ const Banner = () => {
                 </div>
                 <div className="absolute bottom-[-200px] md:bottom-[-350px] w-4/5 md:w-3/5 rounded-xl mx-auto  border-[30px] border-white/20  ">
                     <img
-                        className="rounded-xl overflow-hidden" src="/src/assets/banner.jpg" alt="" />
+                        className="rounded-xl overflow-hidden" src="/assets/banner.jpg" alt="banner image" />
                 </div>
             </div>
         </div>
