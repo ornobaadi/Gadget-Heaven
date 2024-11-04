@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredCartList, getStoredWishList } from '../../utility/addToDb';
 import Gadget from '../Gadget/Gadget';
+import GadgetCart from '../GadgetCart/GadgetCart';
 
 const Dashboard = () => {
     // Cart 
@@ -54,19 +55,20 @@ const Dashboard = () => {
                         WishList
                     </Tab>
                 </TabList>
-
+{/* #1 */}
                 <TabPanel>
                     <div className='flex justify-between'>
-                        <h2>Cart: ({cartList.length}) </h2>
-                        <h2>Total cost: </h2>
+                        <h2 className='text-3xl font-bold my-10'>Cart: ({cartList.length}) </h2>
+                        <h2 className='text-3xl font-bold my-10'>Total cost: </h2>
                     </div>
                     {
-                        cartList.map(gadget => <Gadget key={gadget.gadgetId} gadget={gadget}></Gadget>)
+                        cartList.map(gadget => <GadgetCart key={gadget.gadgetId} gadget={gadget}></GadgetCart>)
                     }
                 </TabPanel>
+{/* 2 */}
                 <TabPanel>
                     <div>
-                        <h2>WishList : ({wishList.length})</h2>
+                        <h2 className='text-3xl font-bold my-10'>WishList : ({wishList.length})</h2>
                     </div>
                     <div>
                     {
