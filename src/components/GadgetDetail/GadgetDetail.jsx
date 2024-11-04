@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredCartList, addToStoredwishList } from "../../utility/addToDb";
+import { addToStoredCartList, addToStoredWishList } from "../../utility/addToDb";
 
 const GadgetDetail = () => {
 
@@ -22,7 +22,7 @@ const GadgetDetail = () => {
     }
 
     const handleAddToFav = (id) => {
-        addToStoredwishList(id);
+        addToStoredWishList(id);
     }
 
 

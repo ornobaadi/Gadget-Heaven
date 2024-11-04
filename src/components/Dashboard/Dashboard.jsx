@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getStoredCartList, getStoredwishList } from '../../utility/addToDb';
+import { getStoredCartList, getStoredWishList } from '../../utility/addToDb';
 import Gadget from '../Gadget/Gadget';
 
 const Dashboard = () => {
     // Cart 
     const [cartList, setCartList] = useState([]);
+    const allGadgets = useLoaderData();
 
     useEffect(() => {
         const storedCartList = getStoredCartList();
@@ -18,13 +19,12 @@ const Dashboard = () => {
         setCartList(addCartList);
     }, [])
 
-    // Wishlist 
+    // WishList 
 
     const [wishList, setWishList] = useState([]);
-    const allGadgets = useLoaderData();
 
     useEffect(() => {
-        const storedWishList = getStoredwishList();
+        const storedWishList = getStoredWishList();
         console.log(storedWishList, allGadgets);
 
         const addWishList = allGadgets.filter(gadget => storedWishList.includes(gadget.gadgetId));
@@ -40,18 +40,18 @@ const Dashboard = () => {
                 <p className='w-2/5'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
             <Tabs>
-                <TabList className="flex space-x-4 justify-center text-white bg-[#9538E2] py-5">
+                <TabList className="flex space-x-4 justify-center bg-[#9538E2] py-5">
                     <Tab
                         selectedClassName="bg-white text-black "
-                        className="btn rounded-full bg-[#9538E2] text-white px-10 hover:bg-gray-300"
+                        className="btn rounded-full bg-[#9538E2] text-black px-10"
                     >
                         Cart
                     </Tab>
                     <Tab
                         selectedClassName="bg-white text-black "
-                        className="btn rounded-full bg-[#9538E2] text-white px-10 hover:bg-gray-300"
+                        className="btn rounded-full bg-[#9538E2] text-black px-10"
                     >
-                        Wishlist
+                        WishList
                     </Tab>
                 </TabList>
 
@@ -66,7 +66,7 @@ const Dashboard = () => {
                 </TabPanel>
                 <TabPanel>
                     <div>
-                        <h2>Wishlist : ({wishList.length})</h2>
+                        <h2>WishList : ({wishList.length})</h2>
                     </div>
                     <div>
                     {

@@ -21,30 +21,30 @@ const addToStoredCartList = (id) => {
     }
 }
 
-const getStoredwishList = () => {
+const getStoredWishList = () => {
     // Cart-list 
-    const storedwishListStr = localStorage.getItem('fav-list');
-    if(storedwishListStr) {
-        const storedwishList = JSON.parse(storedwishListStr);
-        return storedwishList;
+    const storedWishListStr = localStorage.getItem('fav-list');
+    if(storedWishListStr) {
+        const storedWishList = JSON.parse(storedWishListStr);
+        return storedWishList;
     }
     else{
         return [];
     }
 }
-const addToStoredwishList = (id) => {
-    const storedwishList = getStoredwishList();
-    if(storedwishList.includes(id)){
+const addToStoredWishList = (id) => {
+    const storedWishList = getStoredWishList();
+    if(storedWishList.includes(id)){
         console.log(id, 'already exists')
     }
     else{
-        storedwishList.push(id);
-        const storedwishListStr = JSON.stringify(storedwishList);
-        localStorage.setItem('fav-list', storedwishListStr)
+        storedWishList.push(id);
+        const storedWishListStr = JSON.stringify(storedWishList);
+        localStorage.setItem('fav-list', storedWishListStr)
     }
 }
 
 
 
 
-export { addToStoredCartList , addToStoredwishList, getStoredCartList, getStoredwishList}
+export { addToStoredCartList , addToStoredWishList, getStoredCartList, getStoredWishList}
