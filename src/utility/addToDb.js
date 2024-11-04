@@ -21,30 +21,30 @@ const addToStoredCartList = (id) => {
     }
 }
 
-const getStoredFavList = () => {
+const getStoredwishList = () => {
     // Cart-list 
-    const storedFavListStr = localStorage.getItem('fav-list');
-    if(storedFavListStr) {
-        const storedFavList = JSON.parse(storedFavListStr);
-        return storedFavList;
+    const storedwishListStr = localStorage.getItem('fav-list');
+    if(storedwishListStr) {
+        const storedwishList = JSON.parse(storedwishListStr);
+        return storedwishList;
     }
     else{
         return [];
     }
 }
-const addToStoredFavList = (id) => {
-    const storedFavList = getStoredFavList();
-    if(storedFavList.includes(id)){
+const addToStoredwishList = (id) => {
+    const storedwishList = getStoredwishList();
+    if(storedwishList.includes(id)){
         console.log(id, 'already exists')
     }
     else{
-        storedFavList.push(id);
-        const storedFavListStr = JSON.stringify(storedFavList);
-        localStorage.setItem('fav-list', storedFavListStr)
+        storedwishList.push(id);
+        const storedwishListStr = JSON.stringify(storedwishList);
+        localStorage.setItem('fav-list', storedwishListStr)
     }
 }
 
 
 
 
-export { addToStoredCartList , addToStoredFavList}
+export { addToStoredCartList , addToStoredwishList, getStoredCartList, getStoredwishList}

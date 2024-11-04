@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
-
 const Navbar = () => {
 
     const links =
         <>
-            <li><NavLink>Home</NavLink></li>
+            <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink>Statistics</NavLink></li>
-            <li><NavLink>Dashboard</NavLink></li>
+            <li><NavLink to={'dashboard'}>Dashboard</NavLink></li>
             <li><NavLink>✨ Special ✨</NavLink></li>
         </>
 
