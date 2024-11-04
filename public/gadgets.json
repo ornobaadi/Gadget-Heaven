@@ -1,8 +1,8 @@
 [
     {
-        "product_id": "L01",
-        "product_title": "Dell XPS 15",
-        "product_image": "https://i.ibb.co.com/K6hbKWh/Dell.jpg",
+        "gadgetId": "L01",
+        "title": "Dell XPS 15",
+        "image": "https://i.ibb.co.com/K6hbKWh/Dell.jpg",
         "category": "Laptops",
         "price": 1499,
         "description": "Powerful laptop with an immersive display and exceptional performance.",
@@ -17,9 +17,9 @@
         "rating": 4.7
     },
     {
-        "product_id": "L02",
-        "product_title": "Apple MacBook Pro 16-inch",
-        "product_image": "https://i.ibb.co.com/xgt8ggy/Macbook.jpg",
+        "gadgetId": "L02",
+        "title": "Apple MacBook Pro 16-inch",
+        "image": "https://i.ibb.co.com/xgt8ggy/Macbook.jpg",
         "category": "Laptops",
         "price": 2399,
         "description": "High-performance MacBook for professionals with an immersive display.",
@@ -34,9 +34,9 @@
         "rating": 4.9
     },
     {
-        "product_id": "L03",
-        "product_title": "HP Spectre x360",
-        "product_image": "https://i.ibb.co.com/f8sQ9Qn/HP-Spectre.jpg",
+        "gadgetId": "L03",
+        "title": "HP Spectre x360",
+        "image": "https://i.ibb.co.com/f8sQ9Qn/HP-Spectre.jpg",
         "category": "Laptops",
         "price": 1299,
         "description": "Convertible laptop with a sleek design and powerful performance.",
@@ -51,9 +51,9 @@
         "rating": 4.6
     },
     {
-        "product_id": "A01",
-        "product_title": "Sony WH-1000XM5",
-        "product_image": "https://i.ibb.co.com/JvL0FYW/Sony.jpg",
+        "gadgetId": "A01",
+        "title": "Sony WH-1000XM5",
+        "image": "https://i.ibb.co.com/JvL0FYW/Sony.jpg",
         "category": "Accessories",
         "price": 299,
         "description": "Industry-leading noise-canceling headphones with exceptional sound quality.",
@@ -68,9 +68,9 @@
         "rating": 4.8
     },
     {
-        "product_id": "A02",
-        "product_title": "Anker PowerCore 20000mAh Power Bank",
-        "product_image": "https://i.ibb.co.com/PhvGk2C/Anker.png",
+        "gadgetId": "A02",
+        "title": "Anker PowerCore 20000mAh Power Bank",
+        "image": "https://i.ibb.co.com/PhvGk2C/Anker.png",
         "category": "Accessories",
         "price": 49,
         "description": "High-capacity portable charger to keep your devices powered on the go.",
@@ -85,9 +85,9 @@
         "rating": 4.5
     },
     {
-        "product_id": "A03",
-        "product_title": "Logitech MX Master 3S",
-        "product_image": "https://i.ibb.co.com/XbzcHsq/Logitech.png",
+        "gadgetId": "A03",
+        "title": "Logitech MX Master 3S",
+        "image": "https://i.ibb.co.com/XbzcHsq/Logitech.png",
         "category": "Accessories",
         "price": 99,
         "description": "Advanced wireless mouse with ergonomic design and customizable controls.",
@@ -102,9 +102,9 @@
         "rating": 4.8
     },
     {
-        "product_id": "A04",
-        "product_title": "Apple Magic Keyboard",
-        "product_image": "https://i.ibb.co.com/h70vQZj/Apple-Magic-Keyboard.jpg",
+        "gadgetId": "A04",
+        "title": "Apple Magic Keyboard",
+        "image": "https://i.ibb.co.com/h70vQZj/Apple-Magic-Keyboard.jpg",
         "category": "Accessories",
         "price": 129,
         "description": "Sleek and portable keyboard designed for Apple devices.",
@@ -119,9 +119,9 @@
         "rating": 4.7
     },
     {
-        "product_id": "P01",
-        "product_title": "Samsung Galaxy S23 Ultra",
-        "product_image": "https://i.ibb.co.com/FnPkccj/Galaxy-S23-Ultra.jpg",
+        "gadgetId": "P01",
+        "title": "Samsung Galaxy S23 Ultra",
+        "image": "https://i.ibb.co.com/FnPkccj/Galaxy-S23-Ultra.jpg",
         "category": "Smartphones",
         "price": 1199,
         "description": "Flagship smartphone with an incredible display and professional-grade camera.",
@@ -136,9 +136,9 @@
         "rating": 4.6
     },
     {
-        "product_id": "P02",
-        "product_title": "Google Pixel 8",
-        "product_image": "https://i.ibb.co.com/CQt2Qp2/Pixel-8-Pro.jpg",
+        "gadgetId": "P02",
+        "title": "Google Pixel 8",
+        "image": "https://i.ibb.co.com/CQt2Qp2/Pixel-8-Pro.jpg",
         "category": "Smartphones",
         "price": 799,
         "description": "Google's latest smartphone with advanced AI-powered features.",
@@ -153,9 +153,9 @@
         "rating": 4.4
     },
     {
-        "product_id": "P03",
-        "product_title": "OnePlus 11 Pro",
-        "product_image": "https://i.ibb.co.com/YkR6Qsp/Oneplus.jpg",
+        "gadgetId": "P03",
+        "title": "OnePlus 11 Pro",
+        "image": "https://i.ibb.co.com/YkR6Qsp/Oneplus.jpg",
         "category": "Smartphones",
         "price": 999,
         "description": "High-performance smartphone with fast charging and premium build quality.",
