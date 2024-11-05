@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getStoredCartList, getStoredWishList } from '../../utility/addToDb';
+import { getStoredCartList, getStoredWishList, removeFromStoredCartList } from '../../utility/addToDb';
 import GadgetCart from '../GadgetCart/GadgetCart';
 import { Helmet } from 'react-helmet-async';
 
@@ -29,15 +29,24 @@ const Dashboard = () => {
 
     const handleRemoveFromCart = (gadgetId) => {
         setCartList(prevCartList => prevCartList.filter(gadget => gadget.gadgetId !== gadgetId));
-    };
-
-    const handleRemoveFromWishlist = (gadgetId) => {
-        setWishList(prevWishList => prevWishList.filter(gadget => gadget.gadgetId !== gadgetId));
+        removeFromStoredCartList(gadgetId); // Also remove from stored data
     };
 
     const handleSortByPrice = () => {
         const sortedCartList = [...cartList].sort((a, b) => b.price - a.price);
         setCartList(sortedCartList);
+    };
+
+    // Function to show modal
+    const handlePurchaseClick = () => {
+        document.getElementById('purchase_modal').showModal();
+    };
+
+    // Function to clear cart and close modal
+    const handleCloseModal = () => {
+        setCartList([]); // Clear cart items from state
+        cartList.forEach(gadget => removeFromStoredCartList(gadget.gadgetId)); // Clear items from storage
+        document.getElementById('purchase_modal').close(); // Close the modal
     };
 
     return (
@@ -52,18 +61,19 @@ const Dashboard = () => {
             <Tabs>
                 <TabList className="flex space-x-4 justify-center bg-[#9538E2] py-5">
                     <Tab
-                        selectedClassName="bg-white text-black "
+                        selectedClassName="bg-white text-black"
                         className="btn rounded-full bg-[#9538E2] text-black px-10"
                     >
                         Cart
                     </Tab>
                     <Tab
-                        selectedClassName="bg-white text-black "
+                        selectedClassName="bg-white text-black"
                         className="btn rounded-full bg-[#9538E2] text-black px-10"
                     >
                         WishList
                     </Tab>
                 </TabList>
+                {/* Cart Tab Panel */}
                 <TabPanel>
                     <div className='flex justify-between items-center my-10'>
                         <h2 className='text-3xl font-bold'>Cart: ({cartList.length})</h2>
@@ -73,12 +83,13 @@ const Dashboard = () => {
                             </h2>
                             <button
                                 onClick={handleSortByPrice}
-                                className="btn bg-[#9538E2] text-white rounded-lg px-4 py-2"
+                                className="btn btn-outline text-[#9538E2] border-[#9538E2] rounded-full px-4 py-2"
                             >
                                 Sort By Price
                             </button>
                             <button
-                                className="btn bg-[#3B82F6] text-white rounded-lg px-4 py-2"
+                                onClick={handlePurchaseClick}
+                                className="btn bg-[#9538E2] text-white rounded-full px-4 py-2"
                             >
                                 Purchase
                             </button>
@@ -95,6 +106,7 @@ const Dashboard = () => {
                         ))}
                     </div>
                 </TabPanel>
+                {/* WishList Tab Panel */}
                 <TabPanel>
                     <div>
                         <h2 className='text-3xl font-bold my-10'>WishList: ({wishList.length})</h2>
@@ -111,6 +123,17 @@ const Dashboard = () => {
                     </div>
                 </TabPanel>
             </Tabs>
+
+            {/* Purchase Modal */}
+            <dialog id="purchase_modal" className="modal">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">Thank you for your purchase!</h3>
+                    <p className="py-4">Your cart items have been successfully cleared.</p>
+                    <div className="modal-action">
+                        <button onClick={handleCloseModal} className="btn">Close</button>
+                    </div>
+                </div>
+            </dialog>
         </div>
     );
 };
