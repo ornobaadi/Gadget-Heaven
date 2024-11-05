@@ -29,24 +29,30 @@ const Dashboard = () => {
 
     const handleRemoveFromCart = (gadgetId) => {
         setCartList(prevCartList => prevCartList.filter(gadget => gadget.gadgetId !== gadgetId));
-        removeFromStoredCartList(gadgetId); // Also remove from stored data
+        removeFromStoredCartList(gadgetId);
     };
+
+    const handleRemoveFromWishlist = (gadgetId) => {
+        setWishList(prevWishList => prevWishList.filter(gadget => gadget.gadgetId !== gadgetId));
+        removeFromStoredWishList(gadgetId);
+    };
+
 
     const handleSortByPrice = () => {
         const sortedCartList = [...cartList].sort((a, b) => b.price - a.price);
         setCartList(sortedCartList);
     };
 
-    // Function to show modal
+    
     const handlePurchaseClick = () => {
         document.getElementById('purchase_modal').showModal();
     };
 
-    // Function to clear cart and close modal
+    
     const handleCloseModal = () => {
-        setCartList([]); // Clear cart items from state
-        cartList.forEach(gadget => removeFromStoredCartList(gadget.gadgetId)); // Clear items from storage
-        document.getElementById('purchase_modal').close(); // Close the modal
+        setCartList([]);
+        cartList.forEach(gadget => removeFromStoredCartList(gadget.gadgetId));
+        document.getElementById('purchase_modal').close();
     };
 
     return (

@@ -8,7 +8,7 @@ const GadgetCart = ({ gadget, onRemove, isWishlist }) => {
         } else {
             removeFromStoredCartList(gadget.gadgetId);
         }
-        onRemove(gadget.gadgetId); // Trigger the parent component's state update
+        onRemove(gadget.gadgetId);
     };
 
     const { gadgetId, image, title, price, description } = gadget;
