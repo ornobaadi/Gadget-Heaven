@@ -34,7 +34,7 @@ const GadgetDetail = () => {
                 <title>{title} | Gadget Heaven</title>
             </Helmet>
             <div>
-                <div className=" relative hero bg-[#9538E2] mt-5 py-10">
+                <div className=" relative hero bg-[#9538E2] mt-5 py-5">
                     <div className="hero-content text-center">
                         <div className="max-w-2xl text-white">
                             <h1 className="text-5xl font-bold">Product Details</h1>
