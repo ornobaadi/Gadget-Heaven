@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { removeFromStoredCartList, removeFromStoredWishList } from '../../utility/addToDb';
 
 const GadgetCart = ({ gadget, onRemove, isWishlist }) => {
@@ -9,11 +8,8 @@ const GadgetCart = ({ gadget, onRemove, isWishlist }) => {
         } else {
             removeFromStoredCartList(gadget.gadgetId);
         }
-        onRemove(gadget.gadgetId);
+        onRemove(gadget.gadgetId); // Trigger the parent component's state update
     };
-
-
-
 
     const { gadgetId, image, title, price, description } = gadget;
     return (
@@ -24,7 +20,7 @@ const GadgetCart = ({ gadget, onRemove, isWishlist }) => {
                         <img
                             src={image}
                             className="h-[200px]"
-                            alt="" />
+                            alt={title} />
                     </figure>
                     <div className="flex flex-col justify-center">
                         <h1 className="text-3xl m-3 font-bold">{title}</h1>

@@ -20,7 +20,7 @@ const removeFromStoredCartList = (id) => {
     const storedCartList = getStoredCartList();
     const updatedCartList = storedCartList.filter(itemId => itemId !== id);
     localStorage.setItem('cart-list', JSON.stringify(updatedCartList));
-    toast.success("Item removed from cart");
+    toast.success("Item removed from Cart");
 };
 
 const getStoredWishList = () => {
