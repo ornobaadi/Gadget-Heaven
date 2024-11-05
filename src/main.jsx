@@ -14,6 +14,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import GadgetDetail from './components/GadgetDetail/GadgetDetail';
 import Statistics from './components/Statistics/Statistics';
 import Special from './components/Special Page/Special';
+import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
     <RouterProvider router={router} />
+    <Toaster />
     </HelmetProvider>
   </StrictMode>
 )

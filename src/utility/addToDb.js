@@ -1,50 +1,63 @@
+import toast from 'react-hot-toast';
+
 const getStoredCartList = () => {
-    // Cart-list 
     const storedCartListStr = localStorage.getItem('cart-list');
-    if(storedCartListStr) {
+    if (storedCartListStr) {
         const storedCartList = JSON.parse(storedCartListStr);
         return storedCartList;
-    }
-    else{
+    } else {
         return [];
     }
-}
+};
+
 const addToStoredCartList = (id) => {
     const storedCartList = getStoredCartList();
-    if(storedCartList.includes(id)){
-        console.log(id, 'already exists')
-    }
-    else{
+    if (storedCartList.includes(id)) {
+        toast.error('Item is already in the cart!');
+    } else {
         storedCartList.push(id);
         const storedCartListStr = JSON.stringify(storedCartList);
-        localStorage.setItem('cart-list', storedCartListStr)
+        localStorage.setItem('cart-list', storedCartListStr);
+        toast.success('Added to Cart!');
+        updateCartIndicator(storedCartList.length);
     }
-}
+};
 
 const getStoredWishList = () => {
-    // Cart-list 
     const storedWishListStr = localStorage.getItem('fav-list');
-    if(storedWishListStr) {
+    if (storedWishListStr) {
         const storedWishList = JSON.parse(storedWishListStr);
         return storedWishList;
-    }
-    else{
+    } else {
         return [];
     }
-}
+};
+
 const addToStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
-    if(storedWishList.includes(id)){
-        console.log(id, 'already exists')
-    }
-    else{
+    if (storedWishList.includes(id)) {
+        toast.error('Item is already in the wishlist!');
+    } else {
         storedWishList.push(id);
         const storedWishListStr = JSON.stringify(storedWishList);
-        localStorage.setItem('fav-list', storedWishListStr)
+        localStorage.setItem('fav-list', storedWishListStr);
+        toast.success('Added to Wishlist!');
+        updateWishlistIndicator(storedWishList.length);
     }
-}
+};
 
+const updateCartIndicator = (count) => {
+    const cartIndicator = document.querySelector('.cart-indicator');
+    if (cartIndicator) {
+        cartIndicator.textContent = count;
+    }
+};
 
+const updateWishlistIndicator = (count) => {
+    const wishlistIndicator = document.querySelector('.wishlist-indicator');
+    if (wishlistIndicator) {
+        wishlistIndicator.textContent = count;
+    }
+};
 
-
-export { addToStoredCartList , addToStoredWishList, getStoredCartList, getStoredWishList}
+export { addToStoredCartList, addToStoredWishList, getStoredCartList, getStoredWishList };
