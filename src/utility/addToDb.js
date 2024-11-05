@@ -1,63 +1,56 @@
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 const getStoredCartList = () => {
     const storedCartListStr = localStorage.getItem('cart-list');
-    if (storedCartListStr) {
-        const storedCartList = JSON.parse(storedCartListStr);
-        return storedCartList;
-    } else {
-        return [];
-    }
+    return storedCartListStr ? JSON.parse(storedCartListStr) : [];
 };
 
 const addToStoredCartList = (id) => {
     const storedCartList = getStoredCartList();
     if (storedCartList.includes(id)) {
-        toast.error('Item is already in the cart!');
+        toast.error("Item already exists in the cart");
     } else {
         storedCartList.push(id);
-        const storedCartListStr = JSON.stringify(storedCartList);
-        localStorage.setItem('cart-list', storedCartListStr);
-        toast.success('Added to Cart!');
-        updateCartIndicator(storedCartList.length);
+        localStorage.setItem('cart-list', JSON.stringify(storedCartList));
+        toast.success("Item added to cart");
     }
+};
+
+const removeFromStoredCartList = (id) => {
+    const storedCartList = getStoredCartList();
+    const updatedCartList = storedCartList.filter(itemId => itemId !== id);
+    localStorage.setItem('cart-list', JSON.stringify(updatedCartList));
+    toast.success("Item removed from cart");
 };
 
 const getStoredWishList = () => {
     const storedWishListStr = localStorage.getItem('fav-list');
-    if (storedWishListStr) {
-        const storedWishList = JSON.parse(storedWishListStr);
-        return storedWishList;
-    } else {
-        return [];
-    }
+    return storedWishListStr ? JSON.parse(storedWishListStr) : [];
 };
 
 const addToStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
     if (storedWishList.includes(id)) {
-        toast.error('Item is already in the wishlist!');
+        toast.error("Item already exists in the wishlist");
     } else {
         storedWishList.push(id);
-        const storedWishListStr = JSON.stringify(storedWishList);
-        localStorage.setItem('fav-list', storedWishListStr);
-        toast.success('Added to Wishlist!');
-        updateWishlistIndicator(storedWishList.length);
+        localStorage.setItem('fav-list', JSON.stringify(storedWishList));
+        toast.success("Item added to wishlist");
     }
 };
 
-const updateCartIndicator = (count) => {
-    const cartIndicator = document.querySelector('.cart-indicator');
-    if (cartIndicator) {
-        cartIndicator.textContent = count;
-    }
+const removeFromStoredWishList = (id) => {
+    const storedWishList = getStoredWishList();
+    const updatedWishList = storedWishList.filter(itemId => itemId !== id);
+    localStorage.setItem('fav-list', JSON.stringify(updatedWishList));
+    toast.success("Item removed from wishlist");
 };
 
-const updateWishlistIndicator = (count) => {
-    const wishlistIndicator = document.querySelector('.wishlist-indicator');
-    if (wishlistIndicator) {
-        wishlistIndicator.textContent = count;
-    }
+export {
+    addToStoredCartList,
+    addToStoredWishList,
+    getStoredCartList,
+    getStoredWishList,
+    removeFromStoredCartList,
+    removeFromStoredWishList
 };
-
-export { addToStoredCartList, addToStoredWishList, getStoredCartList, getStoredWishList };

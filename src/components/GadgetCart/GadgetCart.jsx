@@ -1,6 +1,19 @@
 // import { Link } from "react-router-dom";
+import { removeFromStoredCartList, removeFromStoredWishList } from '../../utility/addToDb';
 
-const GadgetCart = ({ gadget }) => {
+const GadgetCart = ({ gadget, onRemove, isWishlist }) => {
+
+    const handleRemove = () => {
+        if (isWishlist) {
+            removeFromStoredWishList(gadget.gadgetId);
+        } else {
+            removeFromStoredCartList(gadget.gadgetId);
+        }
+        onRemove(gadget.gadgetId);
+    };
+
+
+
 
     const { gadgetId, image, title, price, description } = gadget;
     return (
@@ -19,7 +32,8 @@ const GadgetCart = ({ gadget }) => {
                         <p className="text-xl m-3 font-bold">Price: ${price}</p>
                     </div>
                 </div>
-                <button className="btn btn-error rounded-full btn-outline">
+                <button onClick={handleRemove} className="btn btn-error rounded-full btn-outline">
+                    {isWishlist ? 'Remove from Wishlist' : 'Remove from Cart'}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
