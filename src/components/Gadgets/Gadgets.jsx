@@ -37,11 +37,11 @@ const Gadgets = () => {
             <div className="flex">
                 {/* Category Buttons */}
                 <div className="flex flex-col items-start border-2 rounded-lg p-8">
-                    <button onClick={() => handleCategoryClick("All")} className="btn">All</button>
-                    <button onClick={() => handleCategoryClick("Laptops")} className="btn">Laptops</button>
-                    <button onClick={() => handleCategoryClick("Smartphones")} className="btn">Smartphones</button>
-                    <button onClick={() => handleCategoryClick("Accessories")} className="btn">Accessories</button>
-                    <button onClick={() => handleCategoryClick("Smartwatches")} className="btn">Smartwatches</button>
+                    <button onClick={() => handleCategoryClick("All")} className={`btn ${selectedCategory === "All" ? " bg-[#9538E2] text-white " : ""}`}>All</button>
+                    <button onClick={() => handleCategoryClick("Laptops")} className={`btn ${selectedCategory === "Laptops" ? "bg-[#9538E2] text-white" : ""}`}>Laptops</button>
+                    <button onClick={() => handleCategoryClick("Smartphones")} className={`btn ${selectedCategory === "Smartphones" ? "bg-[#9538E2] text-white" : ""}`}>Smartphones</button>
+                    <button onClick={() => handleCategoryClick("Accessories")} className={`btn ${selectedCategory === "Accessories" ? "bg-[#9538E2] text-white" : ""}`}>Accessories</button>
+                    <button onClick={() => handleCategoryClick("Smartwatches")} className={`btn ${selectedCategory === "Smartwatches" ? "bg-[#9538E2] text-white" : ""}`}>Smartwatches</button>
                 </div>
                 <div className={`ml-10 ${filteredGadgets.length > 0 ? 'grid grid-cols-1 lg:grid-cols-3 gap-10' : ''}`}>
                     {filteredGadgets.length > 0 ? (
@@ -49,7 +49,7 @@ const Gadgets = () => {
                             <Gadget gadget={gadget} key={gadget.gadgetId} />
                         ))
                     ) : (
-                        <p className="pl-[32rem] mt-32 text-5xl text-center font-bold col-span-full">No Data Found</p>
+                        <p className="pl-96 mt-32 text-5xl text-center font-bold">No Data Found</p>
                     )}
                 </div>
             </div>

@@ -2,7 +2,7 @@
 const Banner = () => {
     return (
         <div>
-            <div className="relative hero py-10 lg:py-32 bg-[#9538E2] rounded-xl min-h-96">
+            <div className="relative hero py-10 lg:py-32 bg-[#9538E2] rounded-b-xl min-h-96">
                 <div className="hero-content text-center">
                     <div className="max-w-5xl text-white">
                         <h1 className="text-xl md:text-5xl font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>

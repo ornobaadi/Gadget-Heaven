@@ -1,17 +1,36 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+
 const Navbar = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
-    const links =
+    const links = (
         <>
-            <li><NavLink to={'/'}>Home</NavLink></li>
-            <li><NavLink to={'statistics'}>Statistics</NavLink></li>
-            <li><NavLink to={'dashboard'}>Dashboard</NavLink></li>
-            <li><NavLink to={'special'}>✨ Special ✨</NavLink></li>
+            <li>
+                <NavLink className={`${isHomePage ? 'text-white' : 'text-black'}`} to="/">
+                    Home
+                </NavLink>
+            </li>
+            <li>
+                <NavLink className={`${isHomePage ? 'text-white' : 'text-black'}`} to="statistics">
+                    Statistics
+                </NavLink>
+            </li>
+            <li>
+                <NavLink className={`${isHomePage ? 'text-white' : 'text-black'}`} to="dashboard">
+                    Dashboard
+                </NavLink>
+            </li>
+            <li>
+                <NavLink className={`${isHomePage ? 'text-white' : 'text-black'}`} to="special">
+                    ✨ Special ✨
+                </NavLink>
+            </li>
         </>
-
+    );
 
     return (
-        <div className="navbar bg-base-100">
+        <div className={`navbar ${isHomePage ? 'bg-[#9538E2]' : 'bg-base-100'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,11 +49,15 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className={`menu menu-sm dropdown-content ${
+                            isHomePage ? 'bg-[#9538E2]' : 'bg-base-100'
+                        } rounded-box z-[1] mt-3 w-52 p-2 shadow`}>
                         {links}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost text-xl">Gadget Heaven</Link>
+                <Link className={`btn btn-ghost text-xl ${isHomePage ? 'text-white' : 'text-black'}`}>
+                    Gadget Heaven
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal gap-5 px-1">
@@ -43,7 +66,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                    <div tabIndex={0} role="button" className={`btn btn-ghost btn-circle ${isHomePage ? 'text-white' : 'text-black'}`}>
                         <div className="indicator">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +84,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <button className="btn btn-ghost btn-circle">
+                <button className={`btn btn-ghost btn-circle ${isHomePage ? 'text-white' : 'text-black'}`}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"

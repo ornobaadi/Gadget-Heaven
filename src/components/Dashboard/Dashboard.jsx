@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import { getStoredCartList, getStoredWishList } from '../../utility/addToDb';
 import Gadget from '../Gadget/Gadget';
 import GadgetCart from '../GadgetCart/GadgetCart';
+import { Helmet } from 'react-helmet-async';
 
 const Dashboard = () => {
     // Cart 
@@ -36,6 +37,9 @@ const Dashboard = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Dashboard | Gadget Heaven</title>
+            </Helmet>
             <div className='flex flex-col items-center py-5 text-center text-white bg-[#9538E2]'>
                 <h3 className="text-5xl font-bold my-5">Dashboard</h3>
                 <p className='w-2/5'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
@@ -55,7 +59,7 @@ const Dashboard = () => {
                         WishList
                     </Tab>
                 </TabList>
-{/* #1 */}
+                {/* #1 */}
                 <TabPanel>
                     <div className='flex justify-between'>
                         <h2 className='text-3xl font-bold my-10'>Cart: ({cartList.length}) </h2>
@@ -65,15 +69,15 @@ const Dashboard = () => {
                         cartList.map(gadget => <GadgetCart key={gadget.gadgetId} gadget={gadget}></GadgetCart>)
                     }
                 </TabPanel>
-{/* 2 */}
+                {/* 2 */}
                 <TabPanel>
                     <div>
                         <h2 className='text-3xl font-bold my-10'>WishList : ({wishList.length})</h2>
                     </div>
                     <div>
-                    {
-                        wishList.map(gadget => <Gadget key={gadget.gadgetId} gadget={gadget}></Gadget>)
-                    }
+                        {
+                            wishList.map(gadget => <Gadget key={gadget.gadgetId} gadget={gadget}></Gadget>)
+                        }
                     </div>
 
                 </TabPanel>
