@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { 
@@ -16,6 +16,7 @@ const Dashboard = () => {
     const [cartList, setCartList] = useState([]);
     const [wishList, setWishList] = useState([]);
     const allGadgets = useLoaderData();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const storedCartList = getStoredCartList();
@@ -67,6 +68,7 @@ const Dashboard = () => {
         setCartList([]);
         cartList.forEach(gadget => removeFromStoredCartList(gadget.gadgetId));
         document.getElementById('purchase_modal').close();
+        navigate("/"); 
     };
 
     return (
