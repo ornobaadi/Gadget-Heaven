@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Banner = () => {
     return (
-        <div>
+        <div className="">
             <div className="relative hero py-10 lg:pb-32 pt-20 bg-[#9538E2] rounded-b-xl min-h-96">
                 <div className="hero-content text-center">
                     <div className="max-w-5xl text-white">
@@ -14,7 +14,7 @@ const Banner = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="absolute bottom-[-200px] md:bottom-[-350px] w-4/5 md:w-3/5 rounded-xl mx-auto  border-[30px] border-white/20  ">
+                <div className="absolute bottom-[-200px] md:bottom-[-450px] w-3/5 rounded-xl mx-auto  border-[30px] border-white/20  ">
                     <img
                         className="rounded-xl overflow-hidden" src="/assets/banner.jpg" alt="banner image" />
                 </div>

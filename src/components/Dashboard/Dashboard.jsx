@@ -47,9 +47,7 @@ const Dashboard = () => {
     const handleMoveToCart = (gadgetId) => {
         const gadget = wishList.find(gadget => gadget.gadgetId === gadgetId);
         if (gadget) {
-            // Remove from wishlist
             handleRemoveFromWishlist(gadgetId);
-            // Add to cart
             setCartList(prevCartList => [...prevCartList, gadget]);
             addToStoredCartList(gadgetId);
         }
@@ -136,7 +134,7 @@ const Dashboard = () => {
             {/* Purchase Modal */}
             <dialog id="purchase_modal" className="modal">
                 <div className="modal-box flex flex-col items-center">
-                    <img src="/public/assets/Group.png" alt="" />
+                    <img src="/assets/Group.png" alt="" />
                     <h3 className="font-bold text-lg my-4">Thank you for your purchase!</h3>
                     <h3 className="font-bold text-lg">Total : ${calculateTotalCost().toFixed(2)}</h3>
                     <p className="my-4">Your order will be delivered within 24hours</p>

@@ -27,7 +27,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className={`navbar ${isHomePage ? 'bg-[#9538E2] text-white rounded-t-xl container mx-auto' : 'bg-base-100'}`}>
+        <div className={`navbar ${isHomePage ? 'bg-[#9538E2] text-white rounded-t-xl px-20' : 'bg-base-100 px-20'}`}>
             <Toaster />
             <div className="navbar-start">
                 <div className="dropdown">

@@ -12,9 +12,9 @@ const GadgetCart = ({ gadget, onRemove, isWishlist, onMoveToCart }) => {
 
     const handleMoveToCart = () => {
         if (onMoveToCart) {
-            addToStoredCartList(gadget.gadgetId); // Adds item to the cart in local storage
-            // removeFromStoredWishList(gadget.gadgetId); // Removes item from the wishlist in local storage
-            // onMoveToCart(gadget.gadgetId); // Updates state in the parent component
+            addToStoredCartList(gadget.gadgetId);
+            // removeFromStoredWishList(gadget.gadgetId);
+            // onMoveToCart(gadget.gadgetId);
         }
     };
 
@@ -51,7 +51,7 @@ const GadgetCart = ({ gadget, onRemove, isWishlist, onMoveToCart }) => {
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    {/* Add to Cart button only appears if the item is in the wishlist */}
+                    
                     {isWishlist && (
                         <button
                             onClick={handleMoveToCart}
