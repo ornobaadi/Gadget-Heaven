@@ -1,0 +1,172 @@
+[
+    {
+        "gadgetId": "L01",
+        "title": "Dell XPS 15",
+        "image": "https://i.ibb.co.com/K6hbKWh/Dell.jpg",
+        "category": "Laptops",
+        "price": 1499,
+        "description": "Powerful laptop with an immersive display and exceptional performance.",
+        "specification": [
+            "15.6-inch InfinityEdge display",
+            "Intel Core i7 processor",
+            "16GB RAM",
+            "512GB SSD",
+            "NVIDIA GeForce GTX 1650 Ti"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "gadgetId": "L02",
+        "title": "Apple MacBook Pro 16-inch",
+        "image": "https://i.ibb.co.com/xgt8ggy/Macbook.jpg",
+        "category": "Laptops",
+        "price": 2399,
+        "description": "High-performance MacBook for professionals with an immersive display.",
+        "specification": [
+            "16-inch Retina display",
+            "Apple M2 Pro chip",
+            "16GB RAM",
+            "1TB SSD",
+            "Up to 21 hours of battery life"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "gadgetId": "L03",
+        "title": "HP Spectre x360",
+        "image": "https://i.ibb.co.com/f8sQ9Qn/HP-Spectre.jpg",
+        "category": "Laptops",
+        "price": 1299,
+        "description": "Convertible laptop with a sleek design and powerful performance.",
+        "specification": [
+            "13.5-inch OLED display",
+            "Intel Core i7 processor",
+            "16GB RAM",
+            "512GB SSD",
+            "360-degree hinge"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "gadgetId": "A01",
+        "title": "Sony WH-1000XM5",
+        "image": "https://i.ibb.co.com/JvL0FYW/Sony.jpg",
+        "category": "Accessories",
+        "price": 299,
+        "description": "Industry-leading noise-canceling headphones with exceptional sound quality.",
+        "specification": [
+            "Adaptive noise canceling",
+            "30 hours of battery life",
+            "Touch sensor controls",
+            "Alexa-enabled for voice access",
+            "Quick charge capability"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "gadgetId": "A02",
+        "title": "Anker PowerCore 20000mAh Power Bank",
+        "image": "https://i.ibb.co.com/PhvGk2C/Anker.png",
+        "category": "Accessories",
+        "price": 99,
+        "description": "High-capacity portable charger to keep your devices powered on the go.",
+        "specification": [
+            "20000mAh capacity",
+            "Dual USB ports",
+            "High-speed charging",
+            "Compact design",
+            "Universal compatibility"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "gadgetId": "A03",
+        "title": "Logitech MX Master 3S",
+        "image": "https://i.ibb.co.com/XbzcHsq/Logitech.png",
+        "category": "Accessories",
+        "price": 99,
+        "description": "Advanced wireless mouse with ergonomic design and customizable controls.",
+        "specification": [
+            "Ergonomic design",
+            "High precision tracking",
+            "Customizable buttons",
+            "USB-C quick charging",
+            "Multi-device control"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "gadgetId": "A04",
+        "title": "Apple Magic Keyboard",
+        "image": "https://i.ibb.co.com/h70vQZj/Apple-Magic-Keyboard.jpg",
+        "category": "Accessories",
+        "price": 129,
+        "description": "Sleek and portable keyboard designed for Apple devices.",
+        "specification": [
+            "Wireless and rechargeable",
+            "Low-profile keys",
+            "Multi-device pairing",
+            "Compact design",
+            "Compatible with macOS and iPadOS"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "gadgetId": "P01",
+        "title": "Samsung Galaxy S23 Ultra",
+        "image": "https://i.ibb.co.com/FnPkccj/Galaxy-S23-Ultra.jpg",
+        "category": "Smartphones",
+        "price": 1199,
+        "description": "Flagship smartphone with an incredible display and professional-grade camera.",
+        "specification": [
+            "6.8-inch Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 2",
+            "200MP wide camera",
+            "5,000mAh battery",
+            "Supports S Pen"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "gadgetId": "P02",
+        "title": "Google Pixel 8",
+        "image": "https://i.ibb.co.com/CQt2Qp2/Pixel-8-Pro.jpg",
+        "category": "Smartphones",
+        "price": 799,
+        "description": "Google's latest smartphone with advanced AI-powered features.",
+        "specification": [
+            "6.2-inch OLED display",
+            "Google Tensor G3 processor",
+            "12.2MP dual-pixel camera",
+            "Titan M2 security chip",
+            "5G connectivity"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "gadgetId": "P03",
+        "title": "OnePlus 11 Pro",
+        "image": "https://i.ibb.co.com/YkR6Qsp/Oneplus.jpg",
+        "category": "Smartphones",
+        "price": 999,
+        "description": "High-performance smartphone with fast charging and premium build quality.",
+        "specification": [
+            "6.7-inch Fluid AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "50MP triple camera setup",
+            "5000mAh battery with 100W charging",
+            "OxygenOS based on Android"
+        ],
+        "availability": true,
+        "rating": 4.5
+    }
+]
