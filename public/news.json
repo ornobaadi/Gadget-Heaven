@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Thinking Different About Apple AI",
+        "image": "https://media.wired.com/photos/666a422f054602e761145594/master/w_1920,c_limit/Apple-AI-Gadget-Lab-Gear.jpg",
+        "link": "https://www.wired.com/story/gadget-lab-podcast-647/"
+    },
+    {
+        "id": 2,
+        "title": "Patronus AI launches API to stop AI hallucinations",
+        "image": "https://venturebeat.com/wp-content/uploads/2024/10/nuneybits_A_striking_digital_illustration_showing_a_sleek_moder_dfe8050f-0cb6-4ca5-a977-8d5197a6c924.webp?w=750",
+        "link": "https://venturebeat.com/ai/patronus-ai-launches-worlds-first-self-serve-api-to-stop-ai-hallucinations/"
+    },
+    {
+        "id": 3,
+        "title": "The Best Android Phones, Tested and Reviewed",
+        "image": "https://media.wired.com/photos/66c7619dc474882288e1ee6d/3:2/w_1280,c_limit/Samsung%20Galaxy%20S24%20(green%20blue%20orange)%20Abstract%20Background%20SOURCE%20Samsung.jpg",
+        "link": "https://www.wired.com/gallery/best-android-phones/"
+    },
+    {
+        "id": 4,
+        "title": "M4 Mac mini vs. M2 Mac mini: What are the differences?",
+        "image": "https://helios-i.mashable.com/imagery/comparisons/04KYnQxKXOZrylG1DwDvR6u-2.fill.size_2000x1124.v1730226182.jpg",
+        "link": "https://mashable.com/comparison/apple-mac-mini-m4-vs-mac-mini-m2"
+    },
+    {
+        "id": 5,
+        "title": "This is Xiaomi's first electric car, the SU7",
+        "image": "https://techcrunch.com/wp-content/uploads/2024/02/IMG_0358.jpg?resize=1200,900",
+        "link": "https://techcrunch.com/2024/02/26/this-is-xiaomis-first-electric-car-the-su7/"
+    },
+    {
+        "id": 6,
+        "title": "ChatGPT Search will do the legwork for you",
+        "image": "https://s.yimg.com/ny/api/res/1.2/4YGOXn6yRYRX1GX.M75eWw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://s.yimg.com/os/creatr-uploaded-images/2024-10/b8383d70-97ab-11ef-a9b7-84619238a498",
+        "link": "https://www.engadget.com/ai/chatgpt-search-will-do-the-legwork-for-you-171912610.html"
+    },
+    {
+        "id": 7,
+        "title": "6 Practical Tips for Using Anthropic's Claude Chatbot",
+        "image": "https://media.wired.com/photos/663bebcc89124d013b288e25/master/w_1920,c_limit/Claude-Advice-Business.jpg",
+        "link": "https://www.wired.com/story/six-practical-tips-for-using-anthropic-claude-chatbot/"
+    },
+    {
+        "id": 8,
+        "title": "Nothing's budget Phone (2a) hits preorder at $349",
+        "image": "https://techcrunch.com/wp-content/uploads/2024/03/16x9-5.jpg?resize=1097,617",
+        "link": "https://techcrunch.com/2024/03/05/nothings-budget-phone-2a-hits-pre-order-at-349/"
+    },
+    {
+        "id": 9,
+        "title": "PS5 Pro's actual specs revealed",
+        "image": "https://www.nextgame.es/wp-content/uploads/2024/09/Captura-de-pantalla-2024-09-10-1.jpg",
+        "link": "https://www.theverge.com/2024/11/4/24287657/sony-ps5-pro-gpu-specs-unboxing-games-list-enhanced"
+    },
+    {
+        "id": 10,
+        "title": "Microsoft Surface Laptop 7 review: Success at last",
+        "image": "https://www.custommacbd.com/cdn/shop/products/pro7.jpg?v=1633616575",
+        "link": "https://www.engadget.com/microsoft-surface-laptop-7-review-success-at-last-120056125.html"
+    }
+]

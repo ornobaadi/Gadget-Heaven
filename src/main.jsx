@@ -13,7 +13,7 @@ import Home from './components/Home/Home';
 import Dashboard from './components/Dashboard/Dashboard';
 import GadgetDetail from './components/GadgetDetail/GadgetDetail';
 import Statistics from './components/Statistics/Statistics';
-import Special from './components/Special Page/Special';
+import News from './components/News/News';
 import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
@@ -31,8 +31,9 @@ const router = createBrowserRouter([
         element: <Statistics></Statistics>,
       },
       {
-        path: 'special',
-        element: <Special></Special>,
+        path: 'news',
+        element: <News></News>,
+        loader: () => fetch('/news.json')
       },
       {
         path: 'gadgets/:gadgetId',
