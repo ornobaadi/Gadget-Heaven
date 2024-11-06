@@ -39,7 +39,7 @@ The project leverages a range of React fundamental concepts, including:
 
 ## 👨‍💻 Developer
 
-[🔗 All rights reserved &copy; Ornob Aadi](https://github.com/ornobaadi)
+**🔗 All rights reserved**: [ &copy; Ornob Aadi](https://github.com/ornobaadi)
 
 ---
 
