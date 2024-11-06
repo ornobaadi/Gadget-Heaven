@@ -1,3 +1,5 @@
+![Gadget Heaven Banner](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-ornobaadi/blob/main/public/assets/banner.jpg)
+
 # Gadget Heaven
 
 Gadget Heaven is an e-commerce platform that allows users to browse, manage, and purchase gadgets. The project showcases a dynamic interface built with React and integrates efficient data handling and management techniques.
@@ -8,7 +10,7 @@ Gadget Heaven is an e-commerce platform that allows users to browse, manage, and
 
 ## Project Requirement Document
 
-[Assignment Requirements](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08-.pdf)
+[Assignment Requirements](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-ornobaadi/blob/main/Batch-10_Assignment-08.pdf)
 
 ---
 
