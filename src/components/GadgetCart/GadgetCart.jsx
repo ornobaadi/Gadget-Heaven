@@ -5,10 +5,10 @@ const GadgetCart = ({ gadget, onRemove, isWishlist, onMoveToCart }) => {
     const handleRemove = () => {
         if (isWishlist) {
             removeFromStoredWishList(gadget.gadgetId);
-            toast.success("Item removed from wishlist"); // Move toast here
+            toast.success("Item removed from wishlist");
         } else {
             removeFromStoredCartList(gadget.gadgetId);
-            toast.success("Item removed from Cart"); // Move toast here
+            toast.success("Item removed from Cart");
         }
         onRemove(gadget.gadgetId);
     };
@@ -16,7 +16,7 @@ const GadgetCart = ({ gadget, onRemove, isWishlist, onMoveToCart }) => {
     const handleMoveToCart = () => {
         if (onMoveToCart) {
             addToStoredCartList(gadget.gadgetId);
-            onMoveToCart(gadget.gadgetId);
+            // onMoveToCart(gadget.gadgetId);
         }
     };
 

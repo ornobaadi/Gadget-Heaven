@@ -16,7 +16,6 @@ const addToStoredCartList = (id) => {
     }
 };
 
-// Remove toast from utility function
 const removeFromStoredCartList = (id) => {
     const storedCartList = getStoredCartList();
     const updatedCartList = storedCartList.filter(itemId => itemId !== id);
@@ -39,7 +38,6 @@ const addToStoredWishList = (id) => {
     }
 };
 
-// Remove toast from utility function
 const removeFromStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
     const updatedWishList = storedWishList.filter(itemId => itemId !== id);
