@@ -11,7 +11,7 @@
 
 ## 🌐 **Live Demo**
 
-- 🌍 **[Visit Gadget Heaven](http://gadget-heaven-ornobaadi.surge.sh)**  
+- 🌍 **[Visit Gadget Heaven](https://gadget-heaven-1.web.app/)**  
 
 ---
 
